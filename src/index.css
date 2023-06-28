@@ -2,13 +2,42 @@
 * {
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
 }
 a {
   text-decoration: none;
   color: black;
 }
+.pink {
+  color: rgb(223, 64, 91);
+}
 li {
   list-style: none;
+}
+.container {
+  padding: 56px 0;
+}
+.row {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+.btn {
+  padding: 8px 16px;
+  border-radius: 24px;
+  border: 1px solid rgb(223, 64, 91);
+  background-color: white;
+  color: rgb(223, 64, 91);
+  font-size: 18px;
+  font-weight: 600;
+  transition: all 400ms ease;
+}
+.btn:hover{
+  cursor: pointer;
+  background-color: rgb(223, 64, 91);
+  color: white;
 }
 
 /*  
@@ -37,7 +66,6 @@ NAV
   );
   background-clip: text;
   -webkit-background-clip: text;
-  text-fill-color: transparent;
   -webkit-text-fill-color: transparent;
 }
 .nav__list {
@@ -53,7 +81,7 @@ NAV
 
 .nav__link--anchor {
   transition: all 400ms ease;
-  color: rgba(0, 0, 0, 0.788)
+  color: rgba(0, 0, 0, 0.788);
 }
 
 .nav__link--anchor:hover {
@@ -72,4 +100,42 @@ NAV
   background-color: rgb(223, 64, 91);
   border-color: white;
   color: white;
+}
+/*
+LANDING
+*/
+#landing {
+  padding: 100px 0;
+}
+.landing__wrapper {
+  display: flex;
+  align-items: center;
+}
+.landing__left {
+  width: 50%;
+  margin-right: 24px;
+}
+.landing__span {
+  font-size: 36px;
+  font-weight: 700;
+  color: rgb(223, 64, 91);
+}
+.landing__header {
+  font-size: 67px;
+  font-weight: 700;
+  margin-top: 12px;
+}
+.landing__para {
+  font-size: 18px;
+  color: darkgray;
+  margin-top: 12px;
+  margin-bottom: 24px;
+}
+
+.landing__right {
+  width: 50%;
+}
+
+.landing__img {
+  width: 100%;
 }
