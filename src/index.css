@@ -223,3 +223,26 @@ ABOUT
   border-radius: 50px;
   cursor: default;
 }
+
+/*
+FEATURED
+*/
+
+.homes {
+  display: flex;
+}
+.home {
+  width: calc(100% / 3);
+  margin: 0 12px;
+  text-align: center;
+  border: 1px solid gray;
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.home__img {
+  width: 80%;
+  height: 270px;
+  border-radius: 20px;
+}
