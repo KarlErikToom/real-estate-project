@@ -1,9 +1,13 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Home from "./ui/Home";
 import { properties as allProperties } from "../data";
 
 function Featured() {
   const [properties, setProperties] = useState(allProperties);
+
+  useEffect(()=>{
+    filterProperty("APARTMENT")
+  },[])
 
   function filterProperty(filter) {
     console.log(filter);
@@ -33,8 +37,8 @@ function Featured() {
     <section id="featured">
       <div className="container">
         <div className="row">
-          <h1 className="section__title">Our most viewed Homes</h1>
-          <select
+          <h1 className="section__title">Quick look at some of our options</h1>
+          <select className="select__menu"
             id="filter"
             defaultValue="APARTMENT"
             onChange={(event) => filterProperty(event.target.value)}
