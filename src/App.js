@@ -4,6 +4,7 @@ import Landing from "./components/Landing";
 import About from "./components/About";
 import Featured from "./components/Featured";
 import Contact from "./components/Contact";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <About />
       <Featured />
       <Contact />
+      <Footer />
     </div>
   );
 }

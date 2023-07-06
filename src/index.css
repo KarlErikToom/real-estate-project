@@ -355,3 +355,24 @@ textarea {
   transform: scale(1.02);
   transition: transform 0.3s ease-in-out;
 }
+
+
+/*
+
+FOOTER
+
+*/
+
+footer{
+  height: 10vh;
+  background: rgb(237,151,182);
+background: linear-gradient(308deg, rgba(237,151,182,0.9051995798319328) 12%, rgba(236,147,179,1) 14%, rgba(213,50,114,1) 84%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.footer__text{
+  text-align: center;
+  color: white;
+  font-weight: 400;
+}
