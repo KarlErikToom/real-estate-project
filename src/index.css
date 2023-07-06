@@ -108,6 +108,20 @@ NAV
 LANDING
 */
 #landing {
+  position: relative;
+  z-index: 0;
+}
+
+#landing::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: linear-gradient(to bottom right, #FFAF7B, #D76D77, #3A1C71);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 25%);
 }
 .landing__wrapper {
   display: flex;
@@ -290,7 +304,7 @@ CONTACT
   box-shadow: 1px 1px 29px 9px rgba(0,0,0,0.15);
   -webkit-box-shadow: 1px 1px 29px 9px rgba(0,0,0,0.15);
   -moz-box-shadow: 1px 1px 29px 9px rgba(0,0,0,0.15);
-  
+  width: 100%;
 }
 .contact-form {
   background-color: #f7f2f2;
@@ -375,4 +389,14 @@ background: linear-gradient(308deg, rgba(237,151,182,0.9051995798319328) 12%, rg
   text-align: center;
   color: white;
   font-weight: 400;
+}
+
+/*
+PROPERTIES
+PAGE
+*/
+
+.property__type{
+  display: flex;
+  flex-direction: column;
 }

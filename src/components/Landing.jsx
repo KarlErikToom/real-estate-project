@@ -1,6 +1,5 @@
 import React from "react";
-import Estate from "../assets/estate.jpg"
-
+import Estate from "../assets/estate.jpg";
 
 function Landing() {
   return (
@@ -23,7 +22,7 @@ function Landing() {
               </div>
             </div>
             <div className="landing__right">
-                <img className="landing__img" src={Estate} alt="" />
+              <img className="landing__img" src={Estate} alt="" />
             </div>
           </div>
         </div>
