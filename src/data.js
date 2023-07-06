@@ -9,7 +9,8 @@ export const properties = [
     location: "City A",
     year_built: 2005,
     garage_size: "2-car",
-    image_url: "https://example.com/images/property1.jpg",
+    image_url:
+      "https://www.lanciahomes.com/sites/default/files/blog-files/lancia_homes_single-family_home_what_it_actually_is_image1.jpeg",
     listing_name: "Spacious Family Home in City A",
   },
   {
@@ -22,7 +23,8 @@ export const properties = [
     location: "City B",
     year_built: 2010,
     garage_size: "1-car",
-    image_url: "https://example.com/images/property2.jpg",
+    image_url:
+      "https://www.usnews.com/dims4/USNEWS/1f1f012/2147483647/crop/2119x1413+0+0/resize/970x647/quality/85/?url=https%3A%2F%2Fwww.usnews.com%2Fcmsmedia%2F66%2F0e%2F016775d041859a2ad5e3102c5013%2Fistock-1322575582.jpg",
     listing_name: "Modern Condo in City B",
   },
   {
@@ -35,7 +37,8 @@ export const properties = [
     location: "City C",
     year_built: 2012,
     garage_size: "2-car",
-    image_url: "https://example.com/images/property3.jpg",
+    image_url:
+      "https://www.thebalancemoney.com/thmb/nLalLeLatpWifTmda2_BB6ygx6I=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-175767618-b02682b12275463e887338e2ad32561b.jpg",
     listing_name: "Contemporary Townhouse in City C",
   },
   {
@@ -48,7 +51,8 @@ export const properties = [
     location: "City A",
     year_built: 1998,
     garage_size: "3-car",
-    image_url: "https://example.com/images/property4.jpg",
+    image_url:
+      "https://webassetsprdnvrsan.blob.core.windows.net/images/24d9324f-1db4-4556-b3e8-3f81b4bc2a67/desktop/thumbnail",
     listing_name: "Charming Home with Large Yard in City A",
   },
   {
@@ -61,7 +65,8 @@ export const properties = [
     location: "City B",
     year_built: 1980,
     garage_size: "No garage",
-    image_url: "https://example.com/images/property5.jpg",
+    image_url:
+      "https://images.adsttc.com/media/images/637c/cc4e/db20/0f35/7400/b765/large_jpg/housing-apartment-at-badade-nagar-studio-frozen-music_1.jpg?1669123187",
     listing_name: "Cozy Apartment in City B",
   },
   {
@@ -74,7 +79,8 @@ export const properties = [
     location: "City C",
     year_built: 2018,
     garage_size: "2-car",
-    image_url: "https://example.com/images/property6.jpg",
+    image_url:
+      "https://www.bhg.com/thmb/PlH4I7FzxnDtSmTIxcWSv2xBx24=/1557x0/filters:no_upscale():strip_icc()/small-monochromatic-home-brick-siding-weathered-wood-cd1a74f7-140b6341efa64cd5af2ecad154710c60.jpg",
     listing_name: "Luxurious Home with Modern Amenities in City C",
   },
   {
@@ -87,7 +93,8 @@ export const properties = [
     location: "City A",
     year_built: 2007,
     garage_size: "1-car",
-    image_url: "https://example.com/images/property8.jpg",
+    image_url:
+      "https://williamsengineering.com/wp-content/uploads/2023/01/Condo-scaled.jpg",
     listing_name: "Modern Condo with City Views in City A",
   },
   {
@@ -100,7 +107,8 @@ export const properties = [
     location: "City B",
     year_built: 2013,
     garage_size: "2-car",
-    image_url: "https://example.com/images/property9.jpg",
+    image_url:
+      "https://assets-global.website-files.com/61d6f3d648b8c989b9b238c0/6357ee6a474b2f51db3709a6_622f699ea4a9d72bc72350ed_What-Is-A-Single-Family-Home.jpeg",
     listing_name: "Stunning Home with Outdoor Pool in City B",
   },
   {
@@ -113,7 +121,8 @@ export const properties = [
     location: "City C",
     year_built: 2008,
     garage_size: "No garage",
-    image_url: "https://example.com/images/property10.jpg",
+    image_url:
+      "https://www.freep.com/gcdn/-mm-/37be50ed4bfcaa7c9a8a536b9009384e6e248f29/c=0-580-2003-1712/local/-/media/2016/09/07/DetroitFreePress/DetroitFreePress/636088679528718017-The-Ashton-Detroit-7.JPG?width=2003&height=1132&fit=crop&format=pjpg&auto=webp",
     listing_name: "Cozy Condo in Quiet Neighborhood in City C",
   },
   {
@@ -126,7 +135,8 @@ export const properties = [
     location: "City B",
     year_built: 2015,
     garage_size: "2-car",
-    image_url: "https://example.com/images/property11.jpg",
+    image_url:
+      "https://raleighrealtyhomes.com/storage/blogs/February2023/KzwQ3fAZafXZ20F8pXtk.png",
     listing_name: "Modern Townhouse with Rooftop Terrace in City B",
   },
   {
@@ -139,7 +149,8 @@ export const properties = [
     location: "City A",
     year_built: 2010,
     garage_size: "3-car",
-    image_url: "https://example.com/images/property12.jpg",
+    image_url:
+      "https://www.apartmentguide.com/blog/wp-content/uploads/2019/11/single_family_home.jpg",
     listing_name: "Elegant Home with Spacious Interiors in City A",
   },
   {
@@ -152,7 +163,8 @@ export const properties = [
     location: "City C",
     year_built: 1995,
     garage_size: "No garage",
-    image_url: "https://example.com/images/property13.jpg",
+    image_url:
+      "https://www.essexapartmenthomes.com/-/media/Project/EssexPropertyTrust/Sites/EssexApartmentHomes/Blog/2021/2021-02-26-Renting-an-Apartment-in-Seattle/Renting-an-Apartment-in-Seattle-BellCentre-1.jpg",
     listing_name: "Affordable Apartment in Convenient Location in City C",
   },
   {
@@ -165,7 +177,8 @@ export const properties = [
     location: "City A",
     year_built: 2009,
     garage_size: "2-car",
-    image_url: "https://example.com/images/property15.jpg",
+    image_url:
+      "https://i0.wp.com/www.khov.com/blog/wp-content/uploads/2020/02/Single-Family-Home-Exterior-1024x655.jpg?resize=768%2C491&ssl=1",
     listing_name: "Coastal Home with Ocean Views in City A",
   },
   {
@@ -178,7 +191,8 @@ export const properties = [
     location: "City B",
     year_built: 2016,
     garage_size: "1-car",
-    image_url: "https://example.com/images/property16.jpg",
+    image_url:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSeSmLiT8oEm17hs0met89cO8BaqdFvNChnWw&usqp=CAU",
     listing_name: "Modern Condo near Downtown in City B",
   },
   {
@@ -191,7 +205,8 @@ export const properties = [
     location: "City C",
     year_built: 2014,
     garage_size: "2-car",
-    image_url: "https://example.com/images/property17.jpg",
+    image_url:
+      "https://www.phillymag.com/wp-content/uploads/sites/3/2022/12/house-for-sale-huge-logan-square-townhouse-exterior-overhead-powelton-digital-media.jpg",
     listing_name: "Spacious Townhouse with Private Patio in City C",
   },
   {
@@ -204,7 +219,8 @@ export const properties = [
     location: "City A",
     year_built: 2012,
     garage_size: "3-car",
-    image_url: "https://example.com/images/property18.jpg",
+    image_url:
+      "https://www.desertpathmarketing.com/wp-content/uploads/2017/02/Single-family_home.jpg",
     listing_name: "Luxury Home with Home Theater in City A",
   },
   {
@@ -217,7 +233,8 @@ export const properties = [
     location: "City B",
     year_built: 2006,
     garage_size: "No garage",
-    image_url: "https://example.com/images/property19.jpg",
+    image_url:
+      "https://is1-3.housingcdn.com/4f2250e8/e60c5d0a32a40f3078ed77efc3e56d6e/v0/fs/green_ville_apartment-bankim_nagar-siliguri-green_hill_group.jpeg",
     listing_name: "Renovated Apartment with Modern Finishes in City B",
   },
   {
@@ -230,7 +247,8 @@ export const properties = [
     location: "City C",
     year_built: 2011,
     garage_size: "2-car",
-    image_url: "https://example.com/images/property20.jpg",
+    image_url:
+      "https://images.ctfassets.net/c0wa9gntjrmf/3O91I29ZRt70D7GqXqr2Zv/a30419023a6eda98ba1e683ffa81cc25/TL-PA-72619-439-Desktop.jpg",
     listing_name: "Spacious Home with Mountain Views in City C",
   },
   {
@@ -243,7 +261,7 @@ export const properties = [
     location: "City A",
     year_built: 2009,
     garage_size: "1-car",
-    image_url: "https://example.com/images/property21.jpg",
+    image_url: "https://www.bria.com.ph/wp-content/uploads/2022/02/bldg-01.jpg",
     listing_name: "Charming Condo in the Heart of City A",
   },
   {
@@ -256,7 +274,8 @@ export const properties = [
     location: "City B",
     year_built: 2013,
     garage_size: "2-car",
-    image_url: "https://example.com/images/property22.jpg",
+    image_url:
+      "https://www.boutiquehomes.com.au/wp-content/uploads/2022/03/Barwon-highlands_0000_Boutique_Barwon_20_Highlands_Estate_FACADE_042.jpg",
     listing_name: "Modern Townhouse with Open Floor Plan in City B",
   },
 ];
