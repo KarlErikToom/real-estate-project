@@ -1,19 +1,13 @@
 import "./App.css";
 import Nav from "./components/Nav";
-import Landing from "./components/Landing";
-import About from "./components/About";
-import Featured from "./components/Featured";
-import Contact from "./components/Contact";
 import Footer from "./components/Footer";
+import FrontPage from "./pages/FrontPage";
 
 function App() {
   return (
     <div className="App">
       <Nav />
-      <Landing />
-      <About />
-      <Featured />
-      <Contact />
+      <FrontPage />
       <Footer />
     </div>
   );
