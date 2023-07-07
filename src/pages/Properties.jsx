@@ -1,5 +1,5 @@
 import React from "react";
-import Home from "../components/ui/Home";
+import PriceRangeSlider from "../components/ui/PriceRangeSlider";
 
 function Properties({ properties }) {
   return (
@@ -8,33 +8,29 @@ function Properties({ properties }) {
         <div className="row">
           <form>
             <label>
-              <input type="checkbox" name="option1" value="Option 1" />
-              Option 1
+              <input type="checkbox" value="APARTMENT" />
+              Apartments
             </label>
             <br />
             <label>
-              <input type="checkbox" name="option2" value="Option 2" />
-              Option 2
+              <input type="checkbox" value="CONDOMINIUM" />
+              Condominiums
             </label>
             <br />
             <label>
-              <input type="checkbox" name="option3" value="Option 3" />
-              Option 3
+              <input type="checkbox" value="TOWNHOUSE" />
+              Townhouses
             </label>
             <br />
             <label>
-              <input type="checkbox" name="option4" value="Option 4" />
-              Option 4
+              <input type="checkbox" value="SINGLE_FAMILY" />
+              Single Family Homes
             </label>
           </form>
+          <PriceRangeSlider />
         </div>
       </div>
     </section>
-    /* <>
-    {properties.map((property) => (
-        <Home property={property} key={property.id} />
-        ))}
-        </>*/
   );
 }
 
