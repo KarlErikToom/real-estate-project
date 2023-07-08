@@ -6,7 +6,10 @@ function Properties({ properties }) {
     <section id="properties">
       <div className="container">
         <div className="row">
+          <aside>
+
           <form>
+            <h1>Property type:</h1>
             <label>
               <input type="checkbox" value="APARTMENT" />
               Apartments
@@ -26,8 +29,9 @@ function Properties({ properties }) {
               <input type="checkbox" value="SINGLE_FAMILY" />
               Single Family Homes
             </label>
-          </form>
           <PriceRangeSlider />
+          </form>
+          </aside>
         </div>
       </div>
     </section>
