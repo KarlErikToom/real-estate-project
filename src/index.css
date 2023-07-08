@@ -266,6 +266,11 @@ FEATURED
 .home:hover {
   transform: scale(105%) translateY(-4%);
 }
+.home__bedrooms,
+.home__bathrooms,
+.home__garage{
+  display: none;
+}
 
 .home__img {
   width: 80%;
@@ -407,13 +412,53 @@ PAGE
 .properties__input {
   margin: 12px 0;
 }
+aside {
+  width: 20%;
+}
+.properties {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.properties__wrapper{
+  display: flex;
+}
+
+.properties .home{
+  width: 100%;
+  height: 240px;
+  margin: 12px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.properties .home__img--wrapper{
+  width: 25%;
+  height: 100%;
+}
+.properties .home__img{
+  width: 100%;
+  height: 100%;
+}
+.properties .home__name{
+  display: flex;
+  align-items: center;
+}
+.properties .home__description{
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+}
+.properties .home__bedrooms,
+.home__bathrooms,
+.home__garage{
+  display: block;
+}
 
 /*
 SLIDER
 */
-aside {
-  width: 20%;
-}
 
 .slideContainer {
   width: 100%;
@@ -506,3 +551,5 @@ SUBMIT BTN
   position: absolute;
   bottom: -20%;
 }
+
+
