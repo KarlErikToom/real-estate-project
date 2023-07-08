@@ -9,6 +9,7 @@ const PriceRangeSlider = () => {
 
   return (
     <div className="slideContainer">
+      <h1>Property price:</h1>
       <input
         type="range"
         min={200000}

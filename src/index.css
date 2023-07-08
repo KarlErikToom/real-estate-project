@@ -398,6 +398,15 @@ footer {
 PROPERTIES
 PAGE
 */
+#properties {
+  height: 100vh;
+}
+.properties__form {
+  position: relative;
+}
+.properties__input {
+  margin: 12px 0;
+}
 
 /*
 SLIDER
@@ -409,6 +418,7 @@ aside {
 .slideContainer {
   width: 100%;
   position: relative;
+  margin-top: 24px;
 }
 
 .slider {
@@ -470,4 +480,29 @@ aside {
 
 .value__para {
   margin-top: 20px;
+}
+
+/*
+BEDROOM
+FILTER
+*/
+.bedroom__container {
+  margin-top: 24px;
+}
+
+.bedroom__filter {
+  width: 100%;
+  display: flex;
+}
+.bedroom__input {
+  width: 50%;
+  height: 35px;
+}
+
+/*
+SUBMIT BTN
+*/
+.submit__btn {
+  position: absolute;
+  bottom: -20%;
 }
