@@ -1,6 +1,4 @@
 import React, { useState } from "react";
-import PriceRangeSlider from "../components/ui/PriceRangeSlider";
-import Bedroom from "../components/ui/Bedroom";
 import Home from "../components/ui/Home";
 
 function Properties({ properties }) {
@@ -31,10 +29,49 @@ function Properties({ properties }) {
           property.property_type === "Single Family Home")
       );
     });
+    const filteredPriceData = filteredData.filter(
+      (property) => property.listing_price <= sliderValue
+    );
+    const filteredRoomData = filteredPriceData.filter(
+      (property) => property.bedrooms >= minBedrooms
+    );
 
-    setFilteredProperties(filteredData);
+    setFilteredProperties(filteredRoomData);
   }
+  /*
+SLIDER
+*/
+  const [sliderValue, setSliderValue] = useState(1);
 
+  const handleSliderChange = (event) => {
+    setSliderValue(Number(event.target.value));
+  };
+  const [price, setPrice] = useState(properties);
+
+  function priceFilter(event) {
+    event.preventDefault();
+    if (sliderValue) {
+      setPrice(
+        properties.filter((property) => property.listing_price <= sliderValue)
+      );
+    }
+  }
+  /*
+  BEDROOM
+  */
+  const [minBedrooms, setMinBedrooms] = useState([]);
+
+  const handleMinBedroomsChange = (event) => {
+    setMinBedrooms(event.target.value);
+  };
+
+  function filterRooms() {
+    if (minBedrooms) {
+      setMinBedrooms(
+        properties.filter((property) => property.bedrooms >= minBedrooms)
+      );
+    }
+  }
 
   return (
     <section id="properties">
@@ -91,8 +128,38 @@ function Properties({ properties }) {
                   />
                   Single Family Homes
                 </label>
-                <PriceRangeSlider  />
-                <Bedroom />
+                <div className="slideContainer">
+                  <h1>Property price:</h1>
+                  <input
+                    type="range"
+                    min={200000}
+                    max={1000000}
+                    value={sliderValue}
+                    id="myRange"
+                    className="slider"
+                    onChange={handleSliderChange}
+                  />
+                  <p className="value__para">
+                    Max Price:{" "}
+                    <span className="value">
+                      {sliderValue.toLocaleString()}$
+                    </span>
+                  </p>
+                </div>
+                <div className="bedroom__container">
+                  <h1>Bedrooms:</h1>
+                  <div className="bedroom__filter">
+                    <label htmlFor="minBedrooms">Min:</label>
+                    <input
+                      type="number"
+                      id="minBedrooms"
+                      min={1}
+                      className="bedroom__min bedroom__input"
+                      value={minBedrooms}
+                      onChange={handleMinBedroomsChange}
+                    />
+                  </div>
+                </div>
                 <button
                   type="submit"
                   onClick={filterBox}
