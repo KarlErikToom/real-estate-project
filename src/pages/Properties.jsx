@@ -19,7 +19,6 @@ function Properties({ properties }) {
       [value]: checked,
     }));
   }
-
   function filterBox(event) {
     event.preventDefault();
 
@@ -35,6 +34,7 @@ function Properties({ properties }) {
 
     setFilteredProperties(filteredData);
   }
+
 
   return (
     <section id="properties">
@@ -91,7 +91,7 @@ function Properties({ properties }) {
                   />
                   Single Family Homes
                 </label>
-                <PriceRangeSlider />
+                <PriceRangeSlider  />
                 <Bedroom />
                 <button
                   type="submit"
