@@ -20,15 +20,27 @@ function Properties({ properties }) {
   function filterBox(event) {
     event.preventDefault();
 
-    const filteredData = properties.filter((property) => {
-      return (
-        (isChecked.APARTMENT && property.property_type === "Apartment") ||
-        (isChecked.CONDOMINIUM && property.property_type === "Condominium") ||
-        (isChecked.TOWNHOUSE && property.property_type === "Townhouse") ||
-        (isChecked.SINGLE_FAMILY &&
-          property.property_type === "Single Family Home")
-      );
-    });
+    let filteredData = properties;
+
+    if (
+      !isChecked.APARTMENT &&
+      !isChecked.CONDOMINIUM &&
+      !isChecked.TOWNHOUSE &&
+      !isChecked.SINGLE_FAMILY
+    ) {
+      filteredData = properties;
+    } else {
+      filteredData = properties.filter((property) => {
+        return (
+          (isChecked.APARTMENT && property.property_type === "Apartment") ||
+          (isChecked.CONDOMINIUM && property.property_type === "Condominium") ||
+          (isChecked.TOWNHOUSE && property.property_type === "Townhouse") ||
+          (isChecked.SINGLE_FAMILY &&
+            property.property_type === "Single Family Home")
+        );
+      });
+    }
+
     const filteredPriceData = filteredData.filter(
       (property) => property.listing_price <= sliderValue
     );
@@ -48,14 +60,6 @@ SLIDER
   };
   const [price, setPrice] = useState(properties);
 
-  function priceFilter(event) {
-    event.preventDefault();
-    if (sliderValue) {
-      setPrice(
-        properties.filter((property) => property.listing_price <= sliderValue)
-      );
-    }
-  }
   /*
   BEDROOM
   */
@@ -64,14 +68,6 @@ SLIDER
   const handleMinBedroomsChange = (event) => {
     setMinBedrooms(event.target.value);
   };
-
-  function filterRooms() {
-    if (minBedrooms) {
-      setMinBedrooms(
-        properties.filter((property) => property.bedrooms >= minBedrooms)
-      );
-    }
-  }
 
   return (
     <section id="properties">
