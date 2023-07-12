@@ -46,6 +46,9 @@ section {
 /*  
 NAV
 */
+nav{
+  height: 5vh;
+}
 .nav__container {
   width: 100%;
   max-width: 1300px;
@@ -552,4 +555,55 @@ SUBMIT BTN
   bottom: -20%;
 }
 
+/*
+PROPERTYINFO
+*/
+#info{
+  height: 95vh;
+  
+}
+.property__selected{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 
+.property__selected--figure{
+  width: 50%;
+}
+.property__selected--img{
+  max-width: 100%;
+}
+
+.property__selected--description{
+  width: 50%;
+  height: 431px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.property__info{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 60px;
+  border-top: 1px solid rgba(128, 128, 128, 0.5);
+  border-left: 1px solid rgba(128, 128, 128, 0.5);
+  border-right: 1px solid rgba(128, 128, 128, 0.5);
+  padding: 6px 12px;
+}
+.property__info--bottom{
+  border-bottom: 1px solid rgba(128, 128, 128, 0.5);
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.property__info--header{
+  font-size: 20px;
+  font-weight: 600;
+}
+.property__info--info{
+  color: rgb(75, 75, 75);
+}
