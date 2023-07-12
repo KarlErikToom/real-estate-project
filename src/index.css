@@ -46,7 +46,7 @@ section {
 /*  
 NAV
 */
-nav{
+nav {
   height: 10vh;
   display: flex;
 }
@@ -164,8 +164,6 @@ LANDING
 ABOUT
 */
 
-
-
 .about__wrapper {
   display: flex;
   align-items: center;
@@ -275,7 +273,7 @@ FEATURED
 }
 .home__bedrooms,
 .home__bathrooms,
-.home__garage{
+.home__garage {
   display: none;
 }
 
@@ -428,11 +426,11 @@ aside {
   flex-direction: column;
   position: relative;
 }
-.properties__wrapper{
+.properties__wrapper {
   display: flex;
 }
 
-.properties .home{
+.properties .home {
   width: 100%;
   height: 240px;
   margin: 12px 0;
@@ -440,19 +438,19 @@ aside {
   flex-direction: row;
   justify-content: space-between;
 }
-.properties .home__img--wrapper{
+.properties .home__img--wrapper {
   width: 25%;
   height: 100%;
 }
-.properties .home__img{
+.properties .home__img {
   width: 100%;
   height: 100%;
 }
-.properties .home__name{
+.properties .home__name {
   display: flex;
   align-items: center;
 }
-.properties .home__description{
+.properties .home__description {
   display: flex;
   flex-direction: column;
   align-items: start;
@@ -464,16 +462,16 @@ aside {
   display: block;
 }
 
-.pagination{
+.pagination {
   position: absolute;
   bottom: -5%;
   left: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
 }
-.page__btn{
+.page__btn {
   margin: 0 6px;
 }
-.reset__btn{
+.reset__btn {
   margin-top: 100px;
   padding: 5px 10px;
 }
@@ -578,26 +576,34 @@ SUBMIT BTN
 /*
 PROPERTYINFO
 */
-#info{
+#info {
   height: 95vh;
-  
 }
-.property__selected{
+.property__selected {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-top: 160px;
 }
-
-.property__selected--figure{
+.back__btn {
+  font-size: 24px;
+  transition: all 200ms ease;
+  position: absolute;
+  top: 13%;
+}
+.back__btn:hover {
+  color: rgb(223, 64, 91);
+}
+.property__selected--figure {
   width: 600px;
   height: fit-content;
 }
-.property__selected--img{
+.property__selected--img {
   max-width: 100%;
   max-height: 100%;
 }
 
-.property__selected--description{
+.property__selected--description {
   width: 50%;
   height: 431px;
   display: flex;
@@ -605,7 +611,7 @@ PROPERTYINFO
   justify-content: center;
 }
 
-.property__info{
+.property__info {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -616,16 +622,16 @@ PROPERTYINFO
   border-right: 1px solid rgba(128, 128, 128, 0.5);
   padding: 6px 12px;
 }
-.property__info--bottom{
+.property__info--bottom {
   border-bottom: 1px solid rgba(128, 128, 128, 0.5);
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
 }
 
-.property__info--header{
+.property__info--header {
   font-size: 20px;
   font-weight: 600;
 }
-.property__info--info{
+.property__info--info {
   color: rgb(75, 75, 75);
 }

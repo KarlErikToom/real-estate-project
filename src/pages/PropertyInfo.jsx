@@ -1,6 +1,6 @@
 import React from "react";
 import { properties } from "../data";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 function PropertyInfo({}) {
   const { id } = useParams();
@@ -10,6 +10,7 @@ function PropertyInfo({}) {
       <div className="container">
         <div className="row">
           <div className="property__selected">
+            <Link className="back__btn" to={"/properties"}> ← Back</Link>
             <figure className="property__selected--figure">
               <img
                 src={property.image_url}
