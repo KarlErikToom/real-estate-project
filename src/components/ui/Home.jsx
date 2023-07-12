@@ -1,17 +1,18 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function Home({ property }) {
   return (
     <div className="home">
       <figure className="home__img--wrapper">
-        <a href="">
+        <Link to={`/properties/${property.id}`}>
           <img className="home__img" src={property.image_url} alt="" />
-        </a>
+        </Link>
       </figure>
       <div className="home__name">
-        <a href="/" className="home__name--link">
+        <Link to={`/properties/${property.id}`} className="home__name--link">
           {property.listing_name}
-        </a>
+        </Link>
       </div>
       <div className="home__description">
         <span className="home__price">{property.listing_price.toLocaleString()}$</span>

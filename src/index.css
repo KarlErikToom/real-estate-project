@@ -4,6 +4,7 @@
   font-family: "Poppins", sans-serif;
   margin: 0;
   padding: 0;
+  scroll-behavior: smooth;
 }
 a {
   text-decoration: none;
@@ -19,7 +20,6 @@ li {
   padding: 56px 0;
 }
 section {
-  padding: 70px 0;
 }
 .row {
   width: 100%;
@@ -47,7 +47,8 @@ section {
 NAV
 */
 nav{
-  height: 5vh;
+  height: 10vh;
+  display: flex;
 }
 .nav__container {
   width: 100%;
@@ -163,6 +164,8 @@ LANDING
 ABOUT
 */
 
+
+
 .about__wrapper {
   display: flex;
   align-items: center;
@@ -266,6 +269,7 @@ FEATURED
   border-radius: 17px;
   transition: all 400ms ease;
 }
+
 .home:hover {
   transform: scale(105%) translateY(-4%);
 }
@@ -422,6 +426,7 @@ aside {
   width: 100%;
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 .properties__wrapper{
   display: flex;
@@ -454,9 +459,23 @@ aside {
   justify-content: center;
 }
 .properties .home__bedrooms,
-.home__bathrooms,
-.home__garage{
+.properties .home__bathrooms,
+.properties .home__garage {
   display: block;
+}
+
+.pagination{
+  position: absolute;
+  bottom: -5%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+.page__btn{
+  margin: 0 6px;
+}
+.reset__btn{
+  margin-top: 100px;
+  padding: 5px 10px;
 }
 
 /*
@@ -471,7 +490,7 @@ SLIDER
 
 .slider {
   -webkit-appearance: none;
-  width: 100%;
+  width: 85%;
   height: 20px;
   background: -webkit-linear-gradient(
     0deg,
@@ -514,7 +533,7 @@ SLIDER
   color: rgb(0, 0, 0);
   font-size: 14px;
   position: absolute;
-  right: 0;
+  right: 10%;
   bottom: 25%;
 }
 .slider::before {
@@ -552,7 +571,8 @@ SUBMIT BTN
 */
 .submit__btn {
   position: absolute;
-  bottom: -20%;
+  bottom: -15%;
+  left: 10%;
 }
 
 /*
@@ -569,10 +589,12 @@ PROPERTYINFO
 }
 
 .property__selected--figure{
-  width: 50%;
+  width: 600px;
+  height: fit-content;
 }
 .property__selected--img{
   max-width: 100%;
+  max-height: 100%;
 }
 
 .property__selected--description{

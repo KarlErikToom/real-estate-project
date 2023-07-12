@@ -1,5 +1,6 @@
 import React from "react";
 import Estate from "../assets/estate.jpg";
+import { Link } from "react-router-dom";
 
 function Landing() {
   return (
@@ -18,7 +19,9 @@ function Landing() {
                   Beatae corporis nesciunt non nam odio qui porro dolores
                   dolorum eveniet quaerat.
                 </p>
-                <button className="btn">Find a Home</button>
+                <Link to="/properties">
+                  <button className="btn">Find a Home</button>
+                </Link>
               </div>
             </div>
             <div className="landing__right">

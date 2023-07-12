@@ -1,14 +1,22 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Home from "../components/ui/Home";
 
 function Properties({ properties }) {
-  const [isChecked, setIsChecked] = useState({
-    APARTMENT: false,
-    CONDOMINIUM: false,
-    TOWNHOUSE: false,
-    SINGLE_FAMILY: false,
+  const [isChecked, setIsChecked] = useState(() => {
+    const savedFilters = localStorage.getItem("filters");
+    return savedFilters
+      ? JSON.parse(savedFilters)
+      : {
+          APARTMENT: false,
+          CONDOMINIUM: false,
+          TOWNHOUSE: false,
+          SINGLE_FAMILY: false,
+        };
   });
-  const [filteredProperties, setFilteredProperties] = useState(properties);
+  const [filteredProperties, setFilteredProperties] = useState(() => {
+    const savedProperties = localStorage.getItem("filteredProperties");
+    return savedProperties ? JSON.parse(savedProperties) : properties;
+  });
 
   function handleOnChange(event) {
     const { value, checked } = event.target;
@@ -17,6 +25,7 @@ function Properties({ properties }) {
       [value]: checked,
     }));
   }
+
   function filterBox(event) {
     event.preventDefault();
 
@@ -49,25 +58,68 @@ function Properties({ properties }) {
     );
 
     setFilteredProperties(filteredRoomData);
+    setCurrentPage(1);
   }
-  /*
-SLIDER
-*/
-  const [sliderValue, setSliderValue] = useState(1);
+
+  const [sliderValue, setSliderValue] = useState(() => {
+    const savedSliderValue = localStorage.getItem("sliderValue");
+    return savedSliderValue ? Number(savedSliderValue) : 1;
+  });
 
   const handleSliderChange = (event) => {
     setSliderValue(Number(event.target.value));
   };
-  const [price, setPrice] = useState(properties);
 
-  /*
-  BEDROOM
-  */
-  const [minBedrooms, setMinBedrooms] = useState([]);
+  const [minBedrooms, setMinBedrooms] = useState(() => {
+    const savedMinBedrooms = localStorage.getItem("minBedrooms");
+    return savedMinBedrooms ? Number(savedMinBedrooms) : "";
+  });
 
   const handleMinBedroomsChange = (event) => {
-    setMinBedrooms(event.target.value);
+    setMinBedrooms(Number(event.target.value));
   };
+
+  const [currentPage, setCurrentPage] = useState(() => {
+    const savedPage = localStorage.getItem("currentPage");
+    return savedPage ? Number(savedPage) : 1;
+  });
+  const propertiesPerPage = 3;
+
+  useEffect(() => {
+    localStorage.setItem("filters", JSON.stringify(isChecked));
+    localStorage.setItem(
+      "filteredProperties",
+      JSON.stringify(filteredProperties)
+    );
+    localStorage.setItem("sliderValue", sliderValue);
+    localStorage.setItem("minBedrooms", minBedrooms);
+    localStorage.setItem("currentPage", currentPage);
+  }, [isChecked, filteredProperties, sliderValue, minBedrooms, currentPage]);
+
+  const startIndex = (currentPage - 1) * propertiesPerPage;
+  const endIndex = startIndex + propertiesPerPage;
+  const propertiesToShow = filteredProperties.slice(startIndex, endIndex);
+
+  const handlePageClick = (pageNumber) => {
+    setCurrentPage(pageNumber);
+  };
+
+  const totalPages = Math.ceil(filteredProperties.length / propertiesPerPage);
+  const pageNumbers = Array.from(
+    { length: totalPages },
+    (_, index) => index + 1
+  );
+
+  function resetFilters() {
+    setIsChecked({
+      APARTMENT: false,
+      CONDOMINIUM: false,
+      TOWNHOUSE: false,
+      SINGLE_FAMILY: false,
+    });
+    setSliderValue(1000000);
+    setMinBedrooms("")
+  }
 
   return (
     <section id="properties">
@@ -164,10 +216,26 @@ SLIDER
                   Search
                 </button>
               </form>
+                <button onClick={resetFilters} className="reset__btn">Reset</button>
             </aside>
             <div className="properties">
-              {filteredProperties.map((property) => (
-                <Home property={property} key={property.id} />
+              {propertiesToShow.length > 0 ? (
+                propertiesToShow.map((property) => (
+                  <Home property={property} key={property.id} />
+                ))
+              ) : (
+                <p>No properties found.</p>
+              )}
+            </div>
+            <div className="pagination">
+              {pageNumbers.map((pageNumber) => (
+                <button
+                  className="page__btn btn"
+                  key={pageNumber}
+                  onClick={() => handlePageClick(pageNumber)}
+                >
+                  {pageNumber}
+                </button>
               ))}
             </div>
           </div>
