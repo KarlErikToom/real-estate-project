@@ -136,7 +136,7 @@ nav {
   display: block;
   color: white;
 }
-@keyframes text-slide{
+@keyframes text-slide {
   0% {
     opacity: 0;
     transform: translateY(-20px);
@@ -713,7 +713,39 @@ FRONTPAGE RESPONSIVNESS
     border: none;
     cursor: pointer;
   }
-  iframe {
-    width: 400px;
+  .landing__span {
+    font-size: 20px;
+  }
+  .landing__header {
+    font-size: 32px;
+  }
+  .landing__para {
+    font-size: 12px;
+  }
+  .btn {
+    font-size: 12px;
+  }
+
+  .about__span {
+    font-size: 14px;
+  }
+  .about__header {
+    font-size: 28px;
+  }
+  .about__para {
+    font-size: 12px;
+  }
+  .section__title {
+    font-size: 28px;
+  }
+
+  .contact__span {
+    font-size: 14px;
+  }
+  .contact-form .heading{
+    font-size: 20px;
+  }
+  iframe{
+    width: 420px;
   }
 }
