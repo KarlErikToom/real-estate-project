@@ -21,11 +21,7 @@ function About() {
                   aliquid! Iusto corrupti sint debitis earum?
                 </p>
               </div>
-              <div className="about__info--wrapper">
-                <span className="info1">price</span>
-                <span className="info2">quality</span>
-                <span className="info3">speed</span>
-              </div>
+             
             </div>
           </div>
         </div>

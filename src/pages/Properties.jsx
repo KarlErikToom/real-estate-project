@@ -118,7 +118,7 @@ function Properties({ properties }) {
       SINGLE_FAMILY: false,
     });
     setSliderValue(1000000);
-    setMinBedrooms("")
+    setMinBedrooms("");
   }
 
   return (
@@ -216,7 +216,9 @@ function Properties({ properties }) {
                   Search
                 </button>
               </form>
-                <button onClick={resetFilters} className="reset__btn">Reset</button>
+              <button onClick={resetFilters} className="reset__btn">
+                Reset
+              </button>
             </aside>
             <div className="properties">
               {propertiesToShow.length > 0 ? (
