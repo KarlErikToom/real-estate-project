@@ -18,7 +18,7 @@ function Home({ property }) {
         <span className="home__price">{property.listing_price.toLocaleString()}$</span>
         <span className="home__bedrooms">{property.bedrooms} Bedrooms</span>
         <span className="home__bathrooms">{property.bathrooms} Bathrooms</span>
-        <span className="home__garage">{property.garage_size} Garage</span>
+        <span className="home__garage">{property.garage_size} </span>
       </div>
     </div>
   );

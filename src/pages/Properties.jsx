@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Home from "../components/ui/Home";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { fa0 } from "@fortawesome/free-solid-svg-icons";
 
 function Properties({ properties }) {
   const [isChecked, setIsChecked] = useState(() => {
@@ -56,6 +58,9 @@ function Properties({ properties }) {
     const filteredRoomData = filteredPriceData.filter(
       (property) => property.bedrooms >= minBedrooms
     );
+
+    aside.classList.toggle("open__aside");
+    toggleBtn.classList.toggle("btn__rotate");
 
     setFilteredProperties(filteredRoomData);
     setCurrentPage(1);
@@ -120,9 +125,21 @@ function Properties({ properties }) {
     setSliderValue(1000000);
     setMinBedrooms("");
   }
+  const aside = document.querySelector("aside");
+  const toggleBtn = document.querySelector(".aside__btn");
+  function toggleFilter() {
+    aside.classList.toggle("open__aside");
+    toggleBtn.classList.toggle("btn__rotate");
+  }
 
   return (
     <section id="properties">
+      <button onClick={toggleFilter} className="aside__btn">
+        <FontAwesomeIcon
+          icon="fa-solid fa-arrow-right"
+          className="properties__arrow"
+        />
+      </button>
       <div className="container">
         <div className="row">
           <div className="properties__wrapper">
