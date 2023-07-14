@@ -678,6 +678,12 @@ PROPERTYINFO
 /*
 FRONTPAGE RESPONSIVNESS
 */
+
+@media(max-width:1200px){
+  .property__selected--figure{
+    width: 525px;
+  }
+}
 @media (max-width: 992px) {
   .landing__span {
     font-size: 32px;
@@ -711,6 +717,19 @@ FRONTPAGE RESPONSIVNESS
   .slider::before {
     bottom: 25%;
     font-size: 12px;
+  }
+
+  .property__selected{
+    flex-direction: column;
+    margin: 0;
+  }
+  .property__selected--description{
+    width: 100%;
+    height: 420px;
+  }
+  .back__btn{
+    left: 7%;
+    top: 20%;
   }
 }
 @media (max-width: 768px) {
@@ -793,6 +812,9 @@ FRONTPAGE RESPONSIVNESS
     bottom: -8%;
     width: 55%;
   }
+  .back__btn{
+    top: 17%;
+  }
 }
 @media (max-width: 576px) {
   .nav__list {
@@ -852,5 +874,15 @@ FRONTPAGE RESPONSIVNESS
   }
   .properties .home__description span{
     margin: 6px 0;
+  }
+
+  .property__selected--figure{
+    width: 100%;
+  }
+  .property__info--header{
+    font-size: 18px;
+  }
+  .property__info--info{
+    font-size: 14px;
   }
 }
