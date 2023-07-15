@@ -49,7 +49,7 @@ function Nav() {
         <button onClick={openMenu} className="nav__menu--btn">
           <FontAwesomeIcon icon="bars" />
         </button>
-        <ul className="nav__menu">
+        <ul className="nav__menu" ref={menuLinksRef}>
           <li className="menu__list" onClick={closeMenu}> 
             <Link to={"/"} className="menu__link">
               Home
