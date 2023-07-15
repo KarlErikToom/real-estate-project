@@ -132,7 +132,7 @@ function Properties({ properties }) {
       asideRef.current.classList.add("open__aside");
     }
     else{
-      asideRef.current.classlist.remove("open__aside")
+      asideRef.current.classList.remove("open__aside")
     }
     toggleBtnRef.current.classList.toggle("btn__rotate");
   }
