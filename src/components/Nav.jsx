@@ -25,12 +25,12 @@ function Nav() {
             </Link>
           </li>
           <li className="nav__link">
-            <a href="/#featured" className="nav__link--anchor">
+            <Link to={"/#featured"} href="/#featured" className="nav__link--anchor">
               Featured
-            </a>
+            </Link>
           </li>
           <li className="nav__link">
-            <a href="/real-estate-project#contact" className="nav__link--anchor">
+            <a href="" className="nav__link--anchor">
               Contact
             </a>
           </li>
