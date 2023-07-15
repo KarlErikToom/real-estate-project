@@ -59,7 +59,7 @@ function Properties({ properties }) {
       (property) => property.bedrooms >= minBedrooms
     );
 
-    aside.classList.toggle("open__aside");
+    asideRef.current.classList.toggle("open__aside");
     toggleBtn.classList.toggle("btn__rotate");
 
     setFilteredProperties(filteredRoomData);
