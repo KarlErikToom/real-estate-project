@@ -9,7 +9,7 @@ import PropertyInfo from "./pages/PropertyInfo";
 
 function App() {
   return (
-    <Router>
+    <Router basename="/real-estate-project">
       <div className="App">
         <Nav />
         <Routes>
