@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { NavHashLink } from "react-router-hash-link";
 
 function Nav() {
   function openMenu(){
@@ -20,12 +21,12 @@ function Nav() {
             </Link>
           </li>
           <li className="nav__link">
-            <Link to={"/#about"} className="nav__link--anchor">
+            <NavHashLink to={"/#about"} className="nav__link--anchor">
               About
-            </Link>
+            </NavHashLink>
           </li>
           <li className="nav__link">
-            <Link to={"/#featured"} href="/#featured" className="nav__link--anchor">
+            <Link to={`/${basename}#featured`} href="/#featured" className="nav__link--anchor">
               Featured
             </Link>
           </li>
