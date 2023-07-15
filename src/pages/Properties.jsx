@@ -130,10 +130,14 @@ function Properties({ properties }) {
   function toggleFilter() {
     if (!asideRef.current.classList.contains("open__aside")) {
       asideRef.current.classList.add("open__aside");
-      toggleBtnRef.current.classList.add("btn__rotate");
     } else {
       asideRef.current.classList.remove("open__aside");
-      toggleBtnRef.current.classlist.remove("btn__rotate")
+    }
+    if(!toggleBtnRef.current.classList.contains("btn__rotate")){
+      toggleBtnRef.current.classList.add("btn__rotate")
+    }
+    else{
+      toggleBtnRef.current.classList.remove("btn__rotate")
     }
   }
 
