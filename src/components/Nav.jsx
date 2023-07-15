@@ -26,7 +26,7 @@ function Nav() {
             </NavHashLink>
           </li>
           <li className="nav__link">
-            <Link to={`/${basename}#featured`} href="/#featured" className="nav__link--anchor">
+            <Link to={`/#featured`} href="/#featured" className="nav__link--anchor">
               Featured
             </Link>
           </li>
