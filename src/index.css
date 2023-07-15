@@ -646,9 +646,7 @@ PROPERTYINFO
   flex-direction: column;
   justify-content: center;
 }
-.active {
-  color: yellow;
-}
+
 
 .property__info {
   display: flex;

@@ -4,8 +4,11 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { NavHashLink } from "react-router-hash-link";
 
 function Nav() {
+  const menuLinks = document.querySelector(".nav__menu")
   function openMenu(){
-    const menuLinks = document.querySelector(".nav__menu")
+    menuLinks.classList.toggle("open__menu")
+  }
+  function closeMenu(){
     menuLinks.classList.toggle("open__menu")
   }
   return (
@@ -26,14 +29,14 @@ function Nav() {
             </NavHashLink>
           </li>
           <li className="nav__link">
-            <Link to={`/#featured`} href="/#featured" className="nav__link--anchor">
+            <NavHashLink to={"/#featured"} href="/#featured" className="nav__link--anchor">
               Featured
-            </Link>
+            </NavHashLink>
           </li>
           <li className="nav__link">
-            <a href="" className="nav__link--anchor">
+            <NavHashLink to={"/#contact"} className="nav__link--anchor">
               Contact
-            </a>
+            </NavHashLink>
           </li>
           <li className="nav__link ">
             <Link
@@ -48,27 +51,27 @@ function Nav() {
           <FontAwesomeIcon icon="bars" />
         </button>
         <ul className="nav__menu">
-          <li className="menu__list">
+          <li className="menu__list" onClick={closeMenu}> 
             <Link to={"/"} className="menu__link">
               Home
             </Link>
           </li>
-          <li className="menu__list">
-            <a href="" className="menu__link">
+          <li className="menu__list" onClick={closeMenu}>
+            <NavHashLink to={"/#about"} className="menu__link">
               About
-            </a>
+            </NavHashLink>
           </li>
-          <li className="menu__list">
-            <a href="" className="menu__link">
+          <li className="menu__list" onClick={closeMenu}>
+            <NavHashLink to={"/#featured"} className="menu__link">
               Featured
-            </a>
+            </NavHashLink>
           </li>
-          <li className="menu__list">
-            <a href="" className="menu__link">
+          <li className="menu__list" onClick={closeMenu}>
+            <NavHashLink to={"/#contact"} className="menu__link">
               Contact
-            </a>
+            </NavHashLink>
           </li>
-          <li className="menu__list">
+          <li className="menu__list" onClick={closeMenu}>
             <Link to={"/properties"} className="menu__link">
               Browse
             </Link>
