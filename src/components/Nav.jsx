@@ -1,16 +1,15 @@
-import React from "react";
+import React, { useRef } from "react";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { NavHashLink } from "react-router-hash-link";
 
 function Nav() {
-  const menuLinks = document.querySelector(".nav__menu")
+  const menuLinksRef = useRef(null)
   function openMenu(){
-    menuLinks.classList.toggle("open__menu")
+    menuLinksRef.current.classList.toggle("open__menu")
   }
   function closeMenu(){
-    menuLinks.classList.toggle("open__menu")
-  }
+    menuLinksRef.current.classList.toggle("open__menu")  }
   return (
     <nav>
       <div className="nav__container">
