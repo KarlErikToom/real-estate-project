@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { NavHashLink } from "react-router-hash-link";
 
 function Nav() {
-  const menuLinkRef = useRef(null)
+  const menuLinksRef = useRef(null);
   function openMenu() {
     if (!menuLinksRef.current.classList.contains("open__menu")) {
       menuLinksRef.current.classList.add("open__menu");
