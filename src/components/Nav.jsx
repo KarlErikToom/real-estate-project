@@ -30,7 +30,7 @@ function Nav() {
             </a>
           </li>
           <li className="nav__link">
-            <a href="/#contact" className="nav__link--anchor">
+            <a href="/real-estate-project#contact" className="nav__link--anchor">
               Contact
             </a>
           </li>
