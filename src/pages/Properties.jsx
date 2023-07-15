@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Home from "../components/ui/Home";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { fa0 } from "@fortawesome/free-solid-svg-icons";
@@ -125,10 +125,15 @@ function Properties({ properties }) {
     setSliderValue(1000000);
     setMinBedrooms("");
   }
-  const aside = document.querySelector("aside");
+  const asideRef = useRef(null);
   const toggleBtn = document.querySelector(".aside__btn");
   function toggleFilter() {
-    aside.classList.toggle("open__aside");
+    if (!asideRef.current.classList.contains("open__aside")) {
+      asideRef.current.classList.add("open__aside");
+    }
+    else{
+      asideRef.current.classlist.remove("open__aside")
+    }
     toggleBtn.classList.toggle("btn__rotate");
   }
 
@@ -143,7 +148,7 @@ function Properties({ properties }) {
       <div className="container">
         <div className="row">
           <div className="properties__wrapper">
-            <aside>
+            <aside ref={asideRef}>
               <form className="properties__form">
                 <h1>Property type:</h1>
                 <label>
