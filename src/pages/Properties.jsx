@@ -60,7 +60,7 @@ function Properties({ properties }) {
     );
 
     asideRef.current.classList.toggle("open__aside");
-    toggleBtn.classList.toggle("btn__rotate");
+    toggleBtnRef.current.classList.toggle("btn__rotate");
 
     setFilteredProperties(filteredRoomData);
     setCurrentPage(1);
@@ -126,7 +126,7 @@ function Properties({ properties }) {
     setMinBedrooms("");
   }
   const asideRef = useRef(null);
-  const toggleBtn = document.querySelector(".aside__btn");
+  const toggleBtnRef = useRef(null)
   function toggleFilter() {
     if (!asideRef.current.classList.contains("open__aside")) {
       asideRef.current.classList.add("open__aside");
@@ -134,12 +134,12 @@ function Properties({ properties }) {
     else{
       asideRef.current.classlist.remove("open__aside")
     }
-    toggleBtn.classList.toggle("btn__rotate");
+    toggleBtnRef.current.classList.toggle("btn__rotate");
   }
 
   return (
     <section id="properties">
-      <button onClick={toggleFilter} className="aside__btn">
+      <button onClick={toggleFilter} className="aside__btn" ref={toggleBtnRef}>
         <FontAwesomeIcon
           icon="fa-solid fa-arrow-right"
           className="properties__arrow"
