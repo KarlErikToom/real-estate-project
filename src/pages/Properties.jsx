@@ -126,13 +126,16 @@ function Properties({ properties }) {
     setMinBedrooms("");
   }
   const asideRef = useRef(null);
-  const toggleBtnRef = useRef(null)
+  const toggleBtnRef = useRef(null);
+
   function toggleFilter() {
-    if (!asideRef.current.classList.contains("open__aside")) {
+    if (
+      asideRef.current &&
+      !asideRef.current.classList.contains("open__aside")
+    ) {
       asideRef.current.classList.add("open__aside");
-    }
-    else{
-      asideRef.current.classList.remove("open__aside")
+    } else if (asideRef.current) {
+      asideRef.current.classList.remove("open__aside");
     }
     toggleBtnRef.current.classList.toggle("btn__rotate");
   }
