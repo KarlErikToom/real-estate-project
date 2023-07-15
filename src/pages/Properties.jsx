@@ -127,17 +127,13 @@ function Properties({ properties }) {
   }
   const asideRef = useRef(null);
   const toggleBtnRef = useRef(null);
-
   function toggleFilter() {
-    if (
-      asideRef.current &&
-      !asideRef.current.classList.contains("open__aside")
-    ) {
+    if (!asideRef.current.classList.contains("open__aside")) {
       asideRef.current.classList.add("open__aside");
-    } else if (asideRef.current) {
+    } else {
       asideRef.current.classList.remove("open__aside");
     }
-    toggleBtnRef.current.classList.toggle("btn__rotate");
+    toggleBtnRef.current.classList.add("btn__rotate");
   }
 
   return (
