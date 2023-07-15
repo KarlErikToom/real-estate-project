@@ -20,9 +20,9 @@ function Nav() {
             </Link>
           </li>
           <li className="nav__link">
-            <a href="//#about" className="nav__link--anchor">
+            <Link to={"/#about"} className="nav__link--anchor">
               About
-            </a>
+            </Link>
           </li>
           <li className="nav__link">
             <a href="/#featured" className="nav__link--anchor">
