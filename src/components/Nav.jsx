@@ -4,12 +4,17 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { NavHashLink } from "react-router-hash-link";
 
 function Nav() {
-  const menuLinksRef = useRef(null)
-  function openMenu(){
-    menuLinksRef.current.classList.toggle("open__menu")
+  function openMenu() {
+    if (!menuLinksRef.current.classList.contains("open__menu")) {
+      menuLinksRef.current.classList.add("open__menu");
+    } else {
+      menuLinksRef.current.classList.remove("open__menu");
+    }
   }
-  function closeMenu(){
-    menuLinksRef.current.classList.toggle("open__menu")  }
+
+  function closeMenu() {
+    menuLinksRef.current.classList.remove("open__menu");
+  }
   return (
     <nav>
       <div className="nav__container">
@@ -28,7 +33,11 @@ function Nav() {
             </NavHashLink>
           </li>
           <li className="nav__link">
-            <NavHashLink to={"/#featured"} href="/#featured" className="nav__link--anchor">
+            <NavHashLink
+              to={"/#featured"}
+              href="/#featured"
+              className="nav__link--anchor"
+            >
               Featured
             </NavHashLink>
           </li>
@@ -50,7 +59,7 @@ function Nav() {
           <FontAwesomeIcon icon="bars" />
         </button>
         <ul className="nav__menu" ref={menuLinksRef}>
-          <li className="menu__list" onClick={closeMenu}> 
+          <li className="menu__list" onClick={closeMenu}>
             <Link to={"/"} className="menu__link">
               Home
             </Link>
