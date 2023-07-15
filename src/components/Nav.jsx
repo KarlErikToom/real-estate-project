@@ -20,7 +20,7 @@ function Nav() {
             </Link>
           </li>
           <li className="nav__link">
-            <a href="/#about" className="nav__link--anchor">
+            <a href="#about" className="nav__link--anchor">
               About
             </a>
           </li>
