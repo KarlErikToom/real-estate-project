@@ -10,7 +10,6 @@ function Featured() {
   },[])
 
   function filterProperty(filter) {
-    console.log(filter);
     if (filter === "APARTMENT") {
       setProperties(
         allProperties.filter((property) => property.property_type === "Apartment")

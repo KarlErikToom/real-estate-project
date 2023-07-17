@@ -818,7 +818,7 @@ FRONTPAGE RESPONSIVNESS
     width: 25%;
   }
   .pagination {
-    bottom: -8%;
+    bottom: -2%;
     width: 55%;
   }
   .back__btn{
@@ -899,6 +899,9 @@ FRONTPAGE RESPONSIVNESS
   }
   .property__info--info{
     font-size: 14px;
+  }
+  .pagination{
+    bottom: 0%;
   }
   
 }
