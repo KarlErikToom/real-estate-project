@@ -68,11 +68,13 @@ function Properties({ properties }) {
 
   const [sliderValue, setSliderValue] = useState(() => {
     const savedSliderValue = localStorage.getItem("sliderValue");
+    const initalValue = savedSliderValue ? Number(savedSliderValue) : 10000;
     return savedSliderValue ? Number(savedSliderValue) : 1;
   });
 
   const handleSliderChange = (event) => {
-    setSliderValue(Number(event.target.value));
+    const newValue = Math.floor(Number(event.target.value) / 10000) *10000;
+    setSliderValue(newValue);
   };
 
   const [minBedrooms, setMinBedrooms] = useState(() => {

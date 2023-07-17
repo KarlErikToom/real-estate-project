@@ -392,6 +392,7 @@ FOOTER
 
 footer {
   height: 10vh;
+  
   background: rgb(237, 151, 182);
   background: linear-gradient(
     308deg,
@@ -861,21 +862,27 @@ FRONTPAGE RESPONSIVNESS
     font-size: 20px;
   }
   iframe {
-    width: 420px;
+    width: 100%;
+  }
+  .properties .home{
+    height: 200px;
   }
   .properties .home__img--wrapper{
-    width: 70%;
+    width: 100%;
   }
   .properties .home__name{
     font-size: 12px;
   }
   .properties .home__description{
     font-size: 12px;
-    width: 40%;
+    width: 50%;
     
   }
   .properties .home__description span{
     margin: 6px 0;
+  }
+  .page__btn{
+    padding: 8px 14px;
   }
 
   .property__selected--figure{
@@ -887,4 +894,5 @@ FRONTPAGE RESPONSIVNESS
   .property__info--info{
     font-size: 14px;
   }
+  
 }
