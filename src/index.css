@@ -5,11 +5,10 @@
   margin: 0;
   padding: 0;
   scroll-behavior: smooth;
-  
 }
 html,
-body{
-  height: auto !important; 
+body {
+  height: auto !important;
   min-height: 100vh;
 }
 a {
@@ -126,6 +125,7 @@ nav {
   display: none;
   background-color: black;
   width: 100%;
+  height: 30%;
   text-align: center;
   animation: slide-down 600ms ease;
 }
@@ -157,7 +157,7 @@ nav {
     height: 0;
   }
   100% {
-    height: 27%;
+    height: 30%;
   }
 }
 /*
@@ -398,7 +398,6 @@ FOOTER
 
 footer {
   height: 10vh;
-  
   background: rgb(237, 151, 182);
   background: linear-gradient(
     308deg,
@@ -439,7 +438,6 @@ aside {
   width: 100%;
   display: flex;
   flex-direction: column;
-  position: relative;
 }
 .properties__wrapper {
   display: flex;
@@ -478,13 +476,8 @@ aside {
 }
 
 .pagination {
-  position: absolute;
-  bottom: -7%;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  width: 100%;
+  text-align: center;
 }
 .page__btn {
   margin: 0 6px;
@@ -615,7 +608,6 @@ SUBMIT BTN
 PROPERTYINFO
 */
 #info {
-  height: 95vh;
 }
 .property__selected {
   display: flex;
@@ -655,7 +647,6 @@ PROPERTYINFO
   justify-content: center;
 }
 
-
 .property__info {
   display: flex;
   justify-content: space-between;
@@ -685,8 +676,8 @@ PROPERTYINFO
 FRONTPAGE RESPONSIVNESS
 */
 
-@media(max-width:1200px){
-  .property__selected--figure{
+@media (max-width: 1200px) {
+  .property__selected--figure {
     width: 525px;
   }
 }
@@ -725,15 +716,15 @@ FRONTPAGE RESPONSIVNESS
     font-size: 12px;
   }
 
-  .property__selected{
+  .property__selected {
     flex-direction: column;
     margin: 0;
   }
-  .property__selected--description{
+  .property__selected--description {
     width: 100%;
     height: 420px;
   }
-  .back__btn{
+  .back__btn {
     left: 7%;
     top: 20%;
   }
@@ -782,7 +773,7 @@ FRONTPAGE RESPONSIVNESS
   .properties__arrow {
     display: block;
   }
-  .aside__btn{
+  .aside__btn {
     display: block;
   }
   .open__aside {
@@ -793,11 +784,17 @@ FRONTPAGE RESPONSIVNESS
     background-color: #3a1c71;
     color: white;
     width: 50%;
-    height: 70%;
+    height: 65%;
     padding: 24px 12px;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
     animation: slide-right 600ms ease;
+  }
+  .slider::before {
+    color: rgb(255, 255, 255);
+  }
+  .slider::after {
+    color: white;
   }
   label {
     font-size: 19px;
@@ -817,11 +814,8 @@ FRONTPAGE RESPONSIVNESS
   .properties .home__description {
     width: 25%;
   }
-  .pagination {
-    bottom: -2%;
-    width: 55%;
-  }
-  .back__btn{
+
+  .back__btn {
     top: 17%;
   }
 }
@@ -870,38 +864,60 @@ FRONTPAGE RESPONSIVNESS
   iframe {
     width: 100%;
   }
-  .properties .home{
+  .properties .home {
     height: 200px;
   }
-  .properties .home__img--wrapper{
+  .properties .home__img--wrapper {
     width: 100%;
   }
-  .properties .home__name{
+  .properties .home__name {
     font-size: 12px;
   }
-  .properties .home__description{
+  .properties .home__description {
     font-size: 12px;
     width: 50%;
-    
   }
-  .properties .home__description span{
+  .properties .home__description span {
     margin: 6px 0;
   }
-  .page__btn{
+  .page__btn {
     padding: 8px 14px;
   }
 
-  .property__selected--figure{
+  .property__selected--figure {
     width: 100%;
   }
-  .property__info--header{
+  .property__info--header {
     font-size: 18px;
   }
-  .property__info--info{
+  .property__info--info {
     font-size: 14px;
   }
-  .pagination{
-    bottom: 0%;
+}
+@media (max-height: 700px) {
+  .nav__menu{
+    height: 40%;
+    animation: slide-down 600ms ease;
   }
-  
+  @keyframes slide-down {
+    0% {
+      height: 0;
+    }
+    100% {
+      height: 40%;
+    }
+  }
+  #properties {
+    height: fit-content;
+  }
+  .properties__form label {
+    font-size: 14px;
+  }
+  .slideContainer {
+    font-size: 14px;
+  }
+
+  .open__aside {
+    height: 90%;
+  }
 }

@@ -73,7 +73,7 @@ function Properties({ properties }) {
   });
 
   const handleSliderChange = (event) => {
-    const newValue = Math.floor(Number(event.target.value) / 10000) *10000;
+    const newValue = Math.floor(Number(event.target.value) / 10000) * 10000;
     setSliderValue(newValue);
   };
 
@@ -135,11 +135,10 @@ function Properties({ properties }) {
     } else {
       asideRef.current.classList.remove("open__aside");
     }
-    if(!toggleBtnRef.current.classList.contains("btn__rotate")){
-      toggleBtnRef.current.classList.add("btn__rotate")
-    }
-    else{
-      toggleBtnRef.current.classList.remove("btn__rotate")
+    if (!toggleBtnRef.current.classList.contains("btn__rotate")) {
+      toggleBtnRef.current.classList.add("btn__rotate");
+    } else {
+      toggleBtnRef.current.classList.remove("btn__rotate");
     }
   }
 
@@ -256,17 +255,17 @@ function Properties({ properties }) {
               ) : (
                 <p>No properties found.</p>
               )}
-            </div>
-            <div className="pagination">
-              {pageNumbers.map((pageNumber) => (
-                <button
-                  className="page__btn btn"
-                  key={pageNumber}
-                  onClick={() => handlePageClick(pageNumber)}
-                >
-                  {pageNumber}
-                </button>
-              ))}
+              <div className="pagination">
+                {pageNumbers.map((pageNumber) => (
+                  <button
+                    className="page__btn btn"
+                    key={pageNumber}
+                    onClick={() => handlePageClick(pageNumber)}
+                  >
+                    {pageNumber}
+                  </button>
+                ))}
+              </div>
             </div>
           </div>
         </div>
