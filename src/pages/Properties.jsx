@@ -263,7 +263,7 @@ function Properties({ properties }) {
                 {pageNumbers.map((pageNumber) => (
                   <button
                     className={`page__btn btn ${
-                      pageNumber === currentPage ? "active" : ""
+                      pageNumber === currentPage ? "onpage" : ""
                     }`}
                     key={pageNumber}
                     onClick={() => handlePageClick(pageNumber)}

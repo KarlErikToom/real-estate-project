@@ -414,10 +414,10 @@ footer {
   color: white;
   font-weight: 400;
 }
-.active{
+.onpage{
   opacity: 0.6;
 }
-.active:hover{
+.onpage:hover{
   cursor: default;
   background-color: white;
   color: rgb(223, 64, 91);
