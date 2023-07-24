@@ -108,6 +108,10 @@ function Properties({ properties }) {
   const propertiesToShow = filteredProperties.slice(startIndex, endIndex);
 
   const handlePageClick = (pageNumber) => {
+    if (pageNumber === currentPage) {
+      return;
+    }
+
     setCurrentPage(pageNumber);
   };
 
@@ -258,7 +262,9 @@ function Properties({ properties }) {
               <div className="pagination">
                 {pageNumbers.map((pageNumber) => (
                   <button
-                    className="page__btn btn"
+                    className={`page__btn btn ${
+                      pageNumber === currentPage ? "active" : ""
+                    }`}
                     key={pageNumber}
                     onClick={() => handlePageClick(pageNumber)}
                   >
